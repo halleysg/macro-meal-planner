@@ -299,28 +299,6 @@ const IngredientsTab = ({ ingredients, setIngredients }) => {
         </form>
       )}
 
-      <div className="info-box">
-        <p><strong>JSON Format Example:</strong></p>
-        <pre>{`[
-  {
-    "name": "Chicken Breast",
-    "portion": 100,
-    "unit": "g",
-    "protein": 31,
-    "carbs": 0,
-    "fats": 3.6
-  },
-  {
-    "name": "Brown Rice",
-    "portion": 100,
-    "unit": "g",
-    "protein": 2.6,
-    "carbs": 23,
-    "fats": 0.9
-  }
-]`}</pre>
-      </div>
-
       <div className="ingredients-grid">
         {ingredients.map(ingredient => (
           <div key={ingredient.id} className="ingredient-card">
@@ -354,6 +332,29 @@ const IngredientsTab = ({ ingredients, setIngredients }) => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="info-box">
+        <p><strong>JSON Format Example:</strong></p>
+        <pre>{`
+        [
+          {
+            "name": "Chicken Breast",
+            "portion": 100,
+            "unit": "g",
+            "protein": 31,
+            "carbs": 0,
+            "fats": 3.6
+          },
+          {
+            "name": "Brown Rice",
+            "portion": 100,
+            "unit": "g",
+            "protein": 2.6,
+            "carbs": 23,
+            "fats": 0.9
+          }
+        ]
+      `}</pre>
       </div>
     </div>
   );
